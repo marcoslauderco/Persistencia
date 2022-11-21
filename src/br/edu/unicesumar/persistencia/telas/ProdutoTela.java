@@ -8,8 +8,8 @@ import br.edu.unicesumar.persistencia.bd.CategoriaCrud;
 import br.edu.unicesumar.persistencia.bd.ProdutoCrud;
 import java.util.List;
 import java.util.Scanner;
-import model.Categoria;
-import model.Produto;
+import br.edu.unicesumar.persistencia.model.Categoria;
+import br.edu.unicesumar.persistencia.model.Produto;
 
 /**
  *

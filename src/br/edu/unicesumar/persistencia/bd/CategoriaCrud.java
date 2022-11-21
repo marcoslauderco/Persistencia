@@ -4,7 +4,7 @@
  */
 package br.edu.unicesumar.persistencia.bd;
 
-import model.Categoria;
+import br.edu.unicesumar.persistencia.model.Categoria;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

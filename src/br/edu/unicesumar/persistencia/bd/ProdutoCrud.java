@@ -6,7 +6,7 @@ package br.edu.unicesumar.persistencia.bd;
 
 import java.util.ArrayList;
 import java.util.List;
-import model.Produto;
+import br.edu.unicesumar.persistencia.model.Produto;
 
 /**
  *

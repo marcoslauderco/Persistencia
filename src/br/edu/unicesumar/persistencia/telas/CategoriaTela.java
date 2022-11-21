@@ -7,7 +7,7 @@ package br.edu.unicesumar.persistencia.telas;
 import br.edu.unicesumar.persistencia.bd.CategoriaCrud;
 import java.util.List;
 import java.util.Scanner;
-import model.Categoria;
+import br.edu.unicesumar.persistencia.model.Categoria;
 
 /**
  *
