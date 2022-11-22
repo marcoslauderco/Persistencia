@@ -12,6 +12,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 /**
  *
  * @author Lauder
@@ -62,12 +65,15 @@ public class CategoriaCrud implements CrudInterface<Categoria> {
     public Categoria recuperar(int id) {
         Categoria categoria = new Categoria();
         try {
-            PreparedStatement sql = conexao.prepareStatement("Select * from categorias WHERE id = ?");
+            /*PreparedStatement sql = conexao.prepareStatement("Select * from categorias WHERE id = ?");
             sql.setInt(1, id);
             ResultSet result = sql.executeQuery();
             result.next();
             categoria.setId(result.getInt("id"));
-            categoria.setDescricao(result.getString("descricao"));
+            categoria.setDescricao(result.getString("descricao"));*/
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("mysqlpu");
+            EntityManager em = emf.createEntityManager();
+            categoria = em.find(Categoria.class, id);
         } catch (Exception e) {
             e.printStackTrace();
         }

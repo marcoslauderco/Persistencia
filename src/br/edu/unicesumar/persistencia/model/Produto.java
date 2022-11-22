@@ -5,16 +5,31 @@
 package br.edu.unicesumar.persistencia.model;
 
 import br.edu.unicesumar.persistencia.model.Categoria;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author Lauder
  */
+@Entity
+@Table(name = "produtos")
 public class Produto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    @Column(length = 50)
     private String nome;
     private String descricao;
     private double preco;
+    
+    @ManyToOne
     private Categoria categoria;
 
     public int getId() {
